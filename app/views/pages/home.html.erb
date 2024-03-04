@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container my-4 p-4 bg-white shadow">
+  <h1>Select a chatroom</h1>
+
+  <ul class="list-unstyled">
+    <% @chatrooms.each do |chatroom| %>
+      <li>
+        <%= link_to chatroom, class: 'text-decoration-none text-dark' do %>
+          <h3>
+            <%= chatroom.name %>
+          </h3>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+
+</div>
